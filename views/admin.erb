@@ -25,27 +25,14 @@
       </li>
     </ul>
 
-    <h1>Welcome to Real Blog</h1>
+    <h1>관리자 모드 입니당</h1>
 
-    <form action="/abap">
-      <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">제목</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="제목을 입력해주세요" name="title">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">내용</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="내용을 입력해주세요" name="content">
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-
-
-        <% @post.each do |post| %>
+        <% @users.each do |user| %>
         <div class="card">
           <div class="card-body">
-        <p>제목 : <%= post.title %></p>
-        <p>내용 : <%= post.body %></p>
+        <p>이메일 : <%= user.email %></p>
+        <p>패스워드 : <%= user.password %></p>
+        <p>날짜 : <%= user.created_at%></p>
           </div>
         </div>
         <% end %>
